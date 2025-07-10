@@ -1,5 +1,4 @@
 import requests
-import json
 import random
 
 
@@ -64,7 +63,9 @@ for i in range(6):
 
     if won:
         break
-    guess = input("Enter your guess: ")
+    guess = "abc"
+    while len(guess)  != 5:
+        guess = input("Enter your guess (5 characters): ")
     if '*' in found:
         test(found, word, guess)
         print(''.join(found))
